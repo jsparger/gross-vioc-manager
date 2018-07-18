@@ -1,0 +1,9 @@
+# Run the latest version of the vioc box.
+# Use the current directory as the hostname
+
+HOSTNAME=File.basename(Dir.getwd)
+Vagrant.configure("2") do |config|
+  config.vm.define "vioc" do |vioc|
+    vioc.vm.box = "esss/vioc-rsync"
+  end
+end
